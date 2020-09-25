@@ -89,8 +89,11 @@
         data-id={JSON.stringify(getKey(item))}
         draggable="true"
         on:dragstart={start}
+        on:touchstart={start}
         on:dragover={over}
+        on:touchmove={over}
         on:dragleave={leave}
+        on:touchend={leave}
         on:drop={drop}
         in:receive={{ key: getKey(item) }}
         out:send={{ key: getKey(item) }}
